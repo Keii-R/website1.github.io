@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,300&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+a, a:visited, a:hover, a:active {
+    color: inherit;
+  }
+html {
+    scroll-behavior: smooth;
+}
+
+/* BACKGROUND */
+.bg img{
+    position: fixed;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    background-position: center;
+}
+/* END BACKGROUND */
+
+/* TITLE N LOGO*/
+.title{
+    position: fixed;
+    z-index: 1;
+    height: 80px;
+    width: 100%;
+    background-color: grey;
+    filter: opacity(0.85);
+    top: 0%;
+    left: 0%;    
+}
+
+.title .icon img{
+    position: fixed;
+    float: left;
+    height: 70px;
+    width: 70px;
+    border-radius: 35px;
+    margin-left: 2%;
+    margin-top: 5px;
+    animation: rotate 1s linear infinite;
+    animation-play-state: paused;
+    animation-delay: calc(var(--scroll) * -1s);
+}
+
+.title .title-items nav{
+    padding-top: 10px;
+    position: fixed;
+    margin-left: 50%;
+    align-items: center;
+}
+
+.title .title-items ul{
+    position: relative;
+    display: inline-block;
+    margin: 18px;
+    font-size: 20px;
+}
+
+.title .title-items ul:hover{
+    animation: glow 1s linear infinite;
+}
+/* END TITLE N LOGO*/
+
+/* HOME */
+.home{
+    align-content: center;
+}
+
+.home .bgHome img{
+    display: cover;
+    margin: 0;
+    height: 100%;
+    width: 103%;
+    z-index: -1;
+    filter: opacity(0.4);
+}
+
+.home h1,h2 {
+    position: absolute;
+    bottom:300px;
+    left: 250px;
+    font-size: 70px;
+}
+/* END HOME */
+
+/* ABOUT US*/
+
+.aboutUs .bgAbout img{
+    display: cover;
+    margin: 0px;
+    height: 100%;
+    width: 103%;
+    z-index: -1;
+    filter: opacity(0.2);
+}
+.aboutUs .info h1{
+    color: whitesmoke;
+    position: absolute;
+    top:1300px;
+    left: 100px;
+    font-size: 70px;
+}
+.aboutUs .info p{
+    color: whitesmoke;
+    position: absolute;
+    top:1450px;
+    left: 100px;
+    font-size: 20px;
+}
+
+.aboutUs .maker1{
+    position: absolute;
+    display: inline-flex;
+    top:1700px;
+    left:100px;
+}
+
+.aboutUs .maker1 .makerImg img{
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.aboutUs .maker1 .makerInfo p{
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.aboutUs .maker2{
+    position: absolute;
+    display: inline-flex;
+    top:2000px;
+    left:100px;
+}
+
+.aboutUs .maker2 .makerImg img{
+    height: 250px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.aboutUs .maker2 .makerInfo p{
+    color: white;
+    margin: 20px;
+    font-size: 20px;
+}
+
+/* END ABOUT US */
+
+/* MUSIC  */
+.music .bgMusic img{
+    display: cover;
+    margin: 0px;
+    height: 100%;
+    width: 103%;
+    z-index: -1;
+    filter: opacity(0.2);
+}
+
+.music .musTitle h1{
+    color: whitesmoke;
+    position: absolute;
+    top:2500px;
+    left: 100px;
+    font-size: 70px;
+}
+
+.music .musicContainer{
+    display: inline-flex;
+    position: absolute;
+    top: 2700px;
+    left: 100px;
+}
+
+.music h2{
+    color: whitesmoke;
+    position: absolute;
+    top:3200px;
+    left: 100px;
+    font-size: 70px;
+}
+
+.music .musicContainer .musicCard{
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+}
+
+.music .musicContainer .musicCard img{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+
+
+/* END MUSIC */
+
+/* CONTACT US */ 
+.contact .bgContact img{
+    display: cover;
+    margin: 0px;
+    height: 100%;
+    width: 103%;
+    z-index: -1;
+    filter: opacity(0.2);
+}
+.contact .info h1{
+    color: whitesmoke;
+    position: absolute;
+    top:3800px;
+    left: 100px;
+    font-size: 70px;
+}
+.contact .info p{
+    color: whitesmoke;
+    position: absolute;
+    top:3950px;
+    left: 100px;
+    font-size: 20px;
+}
+.contact .mail img{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    float: left;
+    left: 150px;
+    top: 4400px;
+}
+
+.contact .mail img:hover{
+    animation: grow 0.2s linear forwards;
+}
+/* END CONTACT US */
+
+/* ANIMATIONS */
+@keyframes rotate{
+    to{
+        transform: rotate(-360deg);
+    }
+    /*50%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }*/
+}
+@keyframes glow{
+    0%{
+        text-shadow: 0 0 10px white;
+    }
+    50%{
+        text-shadow: 0 0 20px white;
+    }
+    100%{
+        text-shadow: 0 0 10px white;
+    }
+}
+@keyframes grow{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/*END ANIMATIONS*/
